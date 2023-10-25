@@ -1,0 +1,268 @@
+/*HEADER*/
+.header {
+    background: rgb(0, 0, 0);
+    text-align: center; /* Center the text horizontally */
+    display: flex;
+    justify-content: center; /* Center the flex items horizontally */
+    align-items: center; /* Center the flex items vertically */
+    height: 150px; /* Set the header's height */
+    transition: background-color 0.9s; /* Smooth transition on hover */
+}
+
+.header h1 {
+    color: white;
+    font-size: 200px;
+    margin: 0; /* Remove default margin for the h1 element */
+    transition: color 0.9s; /* Smooth transition for the color change */
+    padding-top: 700px;
+}
+@keyframes colorChange {
+    0% { color: green; }
+    50% { color: rgb(0, 255, 13); } /* Change to your desired color */
+    100% { color: green; }
+}
+
+#thrift-title {
+    animation: colorChange 3s infinite; /* Adjust the animation duration as needed */
+}
+
+/*Navigations*/
+nav ul {
+    list-style: none;
+    padding-top: 600px;
+    padding-bottom: 200px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav li {
+    display: inline;
+    margin: 0 50px; /* Add spacing between the items if desired */
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color:  rgb(0, 255, 55);
+}
+
+/*HOME SECTION*/
+.home{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home h1{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 80px;
+    letter-spacing: 6px;
+    word-spacing: 6px;
+    color: #33ff00;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    padding-top: 200px;
+}
+.home p{
+    font-size: 30px;
+    padding-bottom: 300px;
+    color: #1c8d00;
+}
+
+.text-container {
+    flex: 1;
+}
+
+.gif-container {
+    flex: 1;
+    text-align: right; /* Align the GIF to the right */
+}
+
+/*BODY*/
+body {
+    background: linear-gradient(to bottom, black, rgb(0, 0, 0), rgb(0, 255, 55));
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#image-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s ease-in-out;
+}
+
+/* Products */
+.product-grid {
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Adjust the gap between items as needed */
+    padding-bottom: 80px;
+}
+
+.product {
+    width: 300px;
+    background-color: #fff;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image img {
+    width: 300px;
+    max-height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product h2 {
+    font-size: 16px; /* Adjust the title font size */
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 14px; /* Adjust the price and size font size */
+}
+
+.add-to-cart {
+    background-color: #000000; /* Example button background color */
+    color: #fff; /* Example button text color */
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px; /* Adjust the button font size */
+    margin-top: auto; /* Push the button to the bottom of the container */
+}
+.add-to-cart:hover{
+    background-color:  rgb(0, 255, 55);
+    color: rgb(0, 0, 0);
+    transition: 0.4s;
+}
+
+/* Style for the shopping cart section */
+.shoppingcart {
+    display: flex;
+    flex-direction: column; /* Display items vertically */
+    align-items: center; /* Center the content horizontally */
+    height: 100vh; /* Adjust the height as needed */
+    text-align: center; /* Center text inside the container */
+}
+
+.shoppingcart h2 {
+    padding-top: 100px;
+    color: white;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+#cart p,
+#cart li,
+#cart-total {
+    color: white;
+    padding: 10px 0;
+}
+
+/*PLACER ORDER FORM*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+.modal h2 {
+    font-size: 30px;
+    color:rgb(0, 255, 0);
+    padding-bottom: 10px;
+}
+
+#order-form {
+    background: rgba(255, 255, 255, 0.5);
+    color: white;
+    border-radius: 5px;
+    width: 320px;
+    padding: 30px;
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"],
+button.close-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button {
+    margin-top: 10px;
+}
+
+.close-button:hover {
+    background-color: rgb(0, 255, 55);
+}
+
